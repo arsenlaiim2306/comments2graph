@@ -1,0 +1,7 @@
+tqdm
+requests
+fasttext
+pandas
+plotly
+scikit-learn
+fasttext
