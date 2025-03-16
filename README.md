@@ -1,13 +1,38 @@
-# comments2graph
-Analysis of YouTube comments based on the proximity of meanings.
+# Comments2Graph 🔍→📊
 
-First, you need to enter your youtube api key in the YT_API_KEY variable in the main.py file.
-To use the script, after main.py you need to enter the id of the video or playlist or channel or the path to the file with this data.
+**Tool for Visualizing Comments into Interactive 2D/3D Graphs**  
+Analyze patterns, cluster, and explore YouTube comments through an ML-powered pipeline.
 
-### Example
-python main.py Jesv24I9bXM 1000 - this will download <=1000 video comments and display the result of their analysis.
-The same goes for playlists and channels.
+## 🚀 Quick Start
 
-python main.py file.list 1000
-In the file file.list lines of a similar format:
-Jesv24I9bXM 1000
+### Installation
+```bash
+git clone https://github.com/arsenlaiim2306/comments2graph.git
+pip install -r requirements.txt
+```
+
+### Basic Usage
+```bash
+# For a YouTube video (auto-download via yt-dlp)
+python -m comments2graph "https://youtube.com/watch?v=..."
+
+# From a file with URLs (one per line)
+python -m comments2graph links.txt
+```
+
+## ⚙️ Configuration
+Create `config.json`:
+```json
+{
+  "youtube_api": {
+    "developerKey": "YOUR_API_KEY"
+  },
+  "dbscan": {
+    "eps": 0.4,
+    "min_samples": 3
+  },
+  "umap": {
+    "n_components": 3  # 2 for 2D, 3 for 3D
+  }
+}
+```

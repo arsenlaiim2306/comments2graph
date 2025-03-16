@@ -1,7 +1,8 @@
-tqdm
-requests
-fasttext
-pandas
-plotly
+yt-dlp
+google-api-python-client
+numpy
 scikit-learn
-fasttext
+umap-learn
+sentence-transformers
+plotly
+pandas
